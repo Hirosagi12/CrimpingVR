@@ -7,6 +7,7 @@ TagManager:
   - Kabel
   - AlatKrip
   - socket
+  - tester
   layers:
   - Default
   - TransparentFX

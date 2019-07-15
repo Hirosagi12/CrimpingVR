@@ -36,7 +36,8 @@ public class ClickBehavior : MonoBehaviour
             }
             if(hit.collider.tag  == "socket")
             {
-
+                Debug.Log("pilihan");
+                pl.Chose();
             }    
         }
     }

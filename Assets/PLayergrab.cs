@@ -6,8 +6,15 @@ public class PLayergrab : MonoBehaviour
 {
     public GameObject myhand;
     public GameObject kabel2;
+    public GameObject pilihan;
+    public GameObject Socket;
+    public GameObject tester;
+   
     public Animator crip;
     bool canCrip = true;
+    bool active = false;
+    bool soket = false;
+
     Ray ray;
     RaycastHit hit;
     PLayergrab Gr;
@@ -21,9 +28,7 @@ public class PLayergrab : MonoBehaviour
 
     // Update is called once per frame  
     void Update()
-    {
-
-        
+    { 
         
     }
 
@@ -38,13 +43,35 @@ public class PLayergrab : MonoBehaviour
         kabel2.transform.localPosition = new Vector3(121f, -26f, 205f);
     }
 
-    public void Choose()
+    public void Chose()
     {
-
+        if (active == false)
+        {
+            pilihan.gameObject.SetActive(true);
+        }
+        else
+        {
+            pilihan.gameObject.SetActive(false);
+        }
     }
+
+    public void second()
+    {
+        if (soket == false)
+        {
+            Socket.gameObject.SetActive(true);
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
+
 
     public void setActive(bool condition)
     {
         Gr.enabled = condition;
+    }
+
+    public void ethernet()
+    {
+        tester.gameObject.SetActive(true);
     }
 }

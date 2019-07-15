@@ -5,14 +5,22 @@ using UnityEngine.UI;
 
 public class Onclick : MonoBehaviour
 {
-    public GameObject Canvas;
+    public GameObject cameraobject;
+    public GameObject maincamera;
 
-    public void OpenCanvas()
+    bool click = true;
+
+    private void Update()
     {
-        if(Canvas !=null)
+        if (Input.GetMouseButtonDown(0) && click == false)
         {
-            Canvas.SetActive(true);
+            //click = true;
+            maincamera.transform.position = cameraobject.transform.position;
+            Debug.Log(maincamera.transform.position);
+            Debug.Log(cameraobject.transform.position);
         }
     }
+
+    
 
 }
